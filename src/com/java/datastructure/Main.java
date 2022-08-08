@@ -19,15 +19,15 @@ public class Main {
         s.push(2);
         s.push(3);
 
-        printAll(s.getStream());
+        printAll(s.stream());
         s.pop();
-        printAll(s.getStream());
+        printAll(s.stream());
         s.pop();
-        printAll(s.getStream());
+        printAll(s.stream());
         s.pop();
-        printAll(s.getStream());
+        printAll(s.stream());
         s.push(4);
-        printAll(s.getStream());
+        printAll(s.stream());
         s.push(5);
         System.out.println(s.peek());
     }
@@ -38,10 +38,10 @@ public class Main {
         list.add(2);
         list.add(3);
 
-        printAll(list.getStream());
+        printAll(list.stream());
 
         list.remove(1);
-        printAll(list.getStream());
+        printAll(list.stream());
     }
 
     static void printAll(Stream<Integer> stream) {

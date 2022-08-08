@@ -13,6 +13,6 @@ public interface List<T> {
 
     int getSize();
 
-    Stream<T> getStream();
+    Stream<T> stream();
 
 }

@@ -39,7 +39,7 @@ public class ArrayStack<T> implements Stack<T> {
 
     @SuppressWarnings("unchecked")
     @Override
-    public Stream<T> getStream() {
+    public Stream<T> stream() {
         return (Stream<T>) Stream.of(Arrays.copyOfRange(elements, 0, size));
     }
 }

@@ -10,6 +10,6 @@ public interface Stack<T> {
 
     T peek();
 
-    Stream<T> getStream();
+    Stream<T> stream();
 
 }

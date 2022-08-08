@@ -68,7 +68,7 @@ public class LinkedList<T> implements List<T> {
         return size;
     }
 
-    public Stream<T> getStream() {
+    public Stream<T> stream() {
         ArrayList<T> all = new ArrayList<>(size);
         Node<T> current = first;
         while (current != null) {
