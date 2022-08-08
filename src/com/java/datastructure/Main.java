@@ -2,24 +2,51 @@ package com.java.datastructure;
 
 import com.java.datastructure.list.LinkedList;
 import com.java.datastructure.list.List;
+import com.java.datastructure.stack.ArrayStack;
+import com.java.datastructure.stack.Stack;
+
+import java.util.stream.Stream;
 
 public class Main {
 
     public static void main(String[] args) {
+        runStack();
+    }
+
+    static void runStack() {
+        Stack<Integer> s = new ArrayStack<>();
+        s.push(1);
+        s.push(2);
+        s.push(3);
+
+        printAll(s.getStream());
+        s.pop();
+        printAll(s.getStream());
+        s.pop();
+        printAll(s.getStream());
+        s.pop();
+        printAll(s.getStream());
+        s.push(4);
+        printAll(s.getStream());
+        s.push(5);
+        System.out.println(s.peek());
+    }
+
+    static void runList() {
         List<Integer> list = new LinkedList<>();
         list.add(1);
         list.add(2);
         list.add(3);
 
-        printAll(list);
+        printAll(list.getStream());
 
         list.remove(1);
-        printAll(list);
-
+        printAll(list.getStream());
     }
 
-    static void printAll(List<Integer> list) {
-        list.getStream().forEach(System.out::print);
+    static void printAll(Stream<Integer> stream) {
+        stream.forEach(System.out::print);
         System.out.println();
     }
+
 }
